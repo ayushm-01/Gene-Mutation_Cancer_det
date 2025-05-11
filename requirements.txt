@@ -7,3 +7,8 @@ scikit-learn
 nltk
 joblib
 gensim
+tensorflow>=2.0
+plotly
+tensorflow
+plotly
+    
