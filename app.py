@@ -513,7 +513,7 @@ def main():
             with col1:
                 model_type = st.selectbox(
                     "Select Deep Learning Architecture", 
-                    ["CNN-LSTM Hybrid", "Bidirectional LSTM", "Transformer"]
+                    ["CNN-LSTM Hybrid", "Bidirectional LSTM"]
                 )
             with col2:
                 test_size = st.slider("Test Size", min_value=0.1, max_value=0.5, value=0.2, step=0.05)
@@ -579,8 +579,7 @@ def main():
                             model = build_cnn_lstm_model(vocab_size, max_length=max_length, num_classes=num_classes)
                         elif model_type == "Bidirectional LSTM":
                             model = build_bidirectional_lstm_model(vocab_size, max_length=max_length, num_classes=num_classes)
-                        else:  # Transformer - simplify for demo
-                            model = build_cnn_lstm_model(vocab_size, max_length=max_length, num_classes=num_classes)
+                       
                         
                         # Update progress
                         progress_bar.progress(30)
