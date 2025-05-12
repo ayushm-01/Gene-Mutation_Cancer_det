@@ -780,14 +780,34 @@ def main():
                         
                         # Show interpretation
                         st.subheader("Clinical Interpretation")
+
                         if predicted_class == 1:
-                            st.info("This mutation is classified as pathogenic and strongly associated with increased cancer risk. Clinical action is recommended.")
+                                st.info("Class 1: This mutation is classified as pathogenic and strongly associated with increased cancer risk. Clinical action is recommended.")
+
                         elif predicted_class == 2:
-                            st.info("This mutation is likely pathogenic. Further clinical correlation is advised.")
+                                st.info("Class 2: This mutation is likely pathogenic. Further clinical correlation is advised.")
+
                         elif predicted_class == 3:
-                            st.info("This variant is of uncertain significance. Additional testing may be required.")
-                        else:
-                            st.info("This variant appears benign with no known association to increased cancer risk.")
+                                st.info("Class 3: This variant is of uncertain significance (VUS). More data or functional studies are needed.")
+
+                        elif predicted_class == 4:
+                                    st.info("Class 4: This mutation is likely benign. It is not expected to contribute to disease.")
+
+                        elif predicted_class == 5:
+                                        st.info("Class 5: This mutation is considered benign. No clinical action is needed.")
+
+                        elif predicted_class == 6:
+                                    st.info("Class 6: Drug response variant. This mutation may influence treatment efficacy or resistance.")
+
+                        elif predicted_class == 7:
+                                    st.info("Class 7: Risk factor variant. This mutation may contribute to disease susceptibility but is not directly causative.")
+
+                        elif predicted_class == 8:
+                                st.info("Class 8: Protective mutation. Associated with reduced risk or severity of disease.")
+
+                        elif predicted_class == 9:
+                                    st.info("Class 9: No known clinical significance. It is not currently associated with disease or clinical outcomes.")
+
                         
                         st.markdown("</div>", unsafe_allow_html=True)
                     
