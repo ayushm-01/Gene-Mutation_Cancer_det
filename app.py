@@ -787,8 +787,9 @@ def main():
                         elif predicted_class == 2:
                                 st.info("Class 2: This mutation is likely pathogenic. Further clinical correlation is advised.")
 
-                        elif predicted_class == 3:
-                                st.info("Class 3: This variant is of uncertain significance (VUS). More data or functional studies are needed.")
+                       elif predicted_class == 3:
+                                st.info("Class 3: Functional alteration variant. This mutation is known to alter the protein structure or function, potentially leading to changes in cellular processes. While it is not directly linked to disease causation, its impact on gene function may influence disease progression or treatment response in some individuals.")
+
 
                         elif predicted_class == 4:
                                     st.info("Class 4: This mutation is likely benign. It is not expected to contribute to disease.")
